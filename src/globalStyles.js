@@ -28,6 +28,7 @@ export default css`
     --gray-300: hsl(199, 35%, 19%);
     --silver-500: hsl(198, 23%, 72%);
     --silver-300: hsl(197, 33%, 89%);
+    --silver-btn-bg-hov: rgba(168, 191, 201, 0.05);
 
     /* FONT SIZES */
     --fs-40: calc(40 / 16 * 1rem);
@@ -61,10 +62,15 @@ export default css`
   }
 
   body {
+    min-height: 100vh;
+    /* display: grid;
+    place-content: center; */
+    background-color: var(--gray-500);
     font-family: "Outfit", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: var(--fw-medium);
+
     /* 4. Add accessible line-height */
-    line-height: 1.5;
+    /* line-height: 1.5; */
     /* 5. Improve text rendering */
     -webkit-font-smoothing: antialiased;
   }
