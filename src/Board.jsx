@@ -251,7 +251,7 @@ const Tile = styled(UnstyledButton)`
     }
   }
 
-  &:hover {
+  &:hover, &:focus {
     .hover {
       display: revert;
     }
