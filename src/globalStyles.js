@@ -98,6 +98,11 @@ export default css`
   h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
   }
+  h1 {
+    font-size: clamp(1.5rem, 9.143vw + -0.643rem, 2.5rem);
+    color: var(--silver-500);
+    text-align: center;
+  }
 
   /*
     10. Create a root stacking context

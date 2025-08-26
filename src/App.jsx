@@ -49,6 +49,7 @@ function App() {
             playerSymbol={playerSymbol}
             playingAgainstAI={playingAgainstAI}
             gameSession={gameSession}
+            setGameSession={setGameSession}
           />
         )}
 
