@@ -129,6 +129,7 @@ const Btn = styled(Dialog.Close)`
   padding: 0;
   border: none;
   border-radius: calc(10 / 16 * 1rem);
+  /* border-bottom: 8px solid var(--silver-btn-bg-hov); */
 
   span {
     display: flex;
@@ -147,8 +148,20 @@ const LeftBtn = styled(Btn)`
   span {
     background-color: var(--blue-500);
   }
+
+  &:hover {
+    span {
+      background-color: var(--blue-300);
+    }
+  }
 `;
 
 const RightBtn = styled(Btn)`
   background-color: var(--yellow-500);
+
+  &:hover {
+    span {
+      background-color: var(--yellow-300);
+    }
+  }
 `;

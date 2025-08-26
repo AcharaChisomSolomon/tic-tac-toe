@@ -255,10 +255,6 @@ const Tile = styled(UnstyledButton)`
     .hover {
       display: revert;
     }
-
-    /* div {
-      transform: translateY(-12px);
-    } */
   }
 
   &:active {
