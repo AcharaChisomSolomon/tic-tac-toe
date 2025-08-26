@@ -1,22 +1,27 @@
 import styled from "@emotion/styled";
-import React from "react";
 
 import UnstyledButton from "./utils/UnstyledButton";
 
 import IconX from './assets/icon-x.svg'
 import IconO from './assets/icon-o.svg'
 
-export default function PlayerChoice() {
-  const [playerSymbol, setPlayerSymbol] = React.useState('O');
+export default function PlayerChoice({
+  playerSymbol,
+  setPlayerSymbol,
+  setPlayingAgainstAI
+}) {
 
   return (
     <Wrapper>
+
       <Title>
         <HeaderImgContaier><img src={IconX} alt="" /></HeaderImgContaier>
         <HeaderImgContaier><img src={IconO} alt="" /></HeaderImgContaier>
       </Title>
+
       <PlayerChoices>
         <Text>PICK PLAYER 1'S MARK</Text>
+
         <PlayerSelectors>
           <PlayerSelector 
             isactive={playerSymbol === 'X'} 
@@ -32,12 +37,19 @@ export default function PlayerChoice() {
             <svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z" fill="#F2B137"/></svg>
           </PlayerSelector>
         </PlayerSelectors>
+        
         <SubText>REMEMBER : X GOES FIRST</SubText>
       </PlayerChoices>
+
       <GameChoices>
-        <CPUGameChoice><span>NEW GAME (VS CPU)</span></CPUGameChoice>
-        <PlayerGameChoice><span>NEW GAME (VS PLAYER)</span></PlayerGameChoice>
+        <CPUGameChoice
+          onClick={() => setPlayingAgainstAI(true)}
+        ><span>NEW GAME (VS CPU)</span></CPUGameChoice>
+        <PlayerGameChoice
+          onClick={() => setPlayingAgainstAI(false)}
+        ><span>NEW GAME (VS PLAYER)</span></PlayerGameChoice>
       </GameChoices>
+
     </Wrapper>
   )
 }

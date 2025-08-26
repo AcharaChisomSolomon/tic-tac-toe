@@ -22,7 +22,13 @@ class Game {
 
 	makeMove(position) {
 		if (this.isOver) return false;
-		if (this.board.placeMark(position, this.currentPlayer.symbol)) {
+		let moveMade = false;
+		if (this.currentPlayer.isAI) {
+			moveMade = this.currentPlayer.makeMove(this.board);
+		} else {
+			moveMade = this.currentPlayer.makeMove(this.board, position);
+		}
+		if (moveMade) {
 			this.checkGameOver();
 			if (!this.isOver) this.switchTurn();
 			return true;
