@@ -144,6 +144,7 @@ export default function Board_({
           playerSymbol={playerSymbol}
           setGameSession={setGameSession}
           setMoveCount={setMoveCount}
+          setFirstMoveMade={setFirstMoveMade}
         />
       )}
 

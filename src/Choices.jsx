@@ -12,7 +12,8 @@ export default function Choices({
   playingAgainstAI,
   playerSymbol,
   setGameSession,
-  setMoveCount
+  setMoveCount,
+  setFirstMoveMade
 }) {
   const handleLeftBtn = () => {
     if (round.isOver) {
@@ -24,6 +25,7 @@ export default function Choices({
   const handleRightBtn = () => {
     round.start()
     setMoveCount(c => c + 1)
+    setFirstMoveMade(false)
     onDismiss()
   }
 
